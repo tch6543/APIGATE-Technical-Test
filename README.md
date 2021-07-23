@@ -1,1 +1,0 @@
-# APIGATE-Technical-Test
