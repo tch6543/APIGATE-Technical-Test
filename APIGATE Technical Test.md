@@ -9,7 +9,7 @@ Each voter can vote in zero or more referenda. Each referendum has one or more q
 Entity diagram
 ![Entity diagram](./diagrams/entity.png)
 
-* About index
+***About index***
 
 Primary Key and Foreign Key as specific in the entity.
 
@@ -23,14 +23,14 @@ UNIQUE (referendumQuestionId, voterId);
 
 For index, probably add into table `vote` on column `referendumQuestionId` with the design question. <br>
 
-However, rules of thumbs for design table index should depend on the usage and table size in order to avoid any overhead for other use-case, for example write operation.
-Using explain query or sql profiler to analysize the query to give a better desgin.
+However, rules of thumbs for design table index should depend on the usage and table size in order to avoid any overhead for other use-case, for example write operation.</br>
+Using explain query or sql profiler to analyze the query to give a better design.
 
 ```
 CREATE INDEX idx_referenceQuestionId on vote(referendumQuestionId)
 ```
 
-* Get result for a referendumQuestion
+***Get result for a referendumQuestion***
 
 ```
 select 
